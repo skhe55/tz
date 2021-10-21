@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+.bodyContainer{
+    width: 100%;
+    .bodyFlexContainer {
+        display: flex;
+        justify-content: center;
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .button_logout {
+            color: black;
+            margin: 5px 0 5px 0;
+            padding: 8px;
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #6980bf;
+        }
+        .button_logout:hover {
+            transition: all 0.5s ease-in;
+            background-color: #bfa869;
+        }
+    }
+}

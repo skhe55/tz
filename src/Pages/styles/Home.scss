@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@mixin buttonStyles($backColor, $typeCursor) {
+    cursor: $typeCursor;
+    color: black;
+    margin: 0px 0 5px 0;
+    padding: 4px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    background-color: $backColor;
+}
+
+@mixin buttonHoverStyles {
+    transition: all 0.5s ease-in;
+    background-color: #bfa869;
+}
+
+.bodyContainer {
+    width: 100%;
+    height: 100vh;
+    .bodyFlexContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        .signinFlexContainer {
+            display: flex;
+            flex-direction: column;
+            .inputStyles {
+                border-radius: 12px;
+                padding: 6px;
+                margin: 0 0 5px 0;
+                border-color: black;
+                background-color: #bfa869;
+                color: black;
+            }
+            .inputStyles::placeholder {
+                color: black;
+            }
+            .button_disabled {
+                @include buttonStyles(#d0cdc5, default);
+            }
+            .button_enabled {
+                @include buttonStyles(#6980bf, pointer);
+            }
+            .button_enabled:hover {
+                @include buttonHoverStyles();   
+            }
+        }
+    }
+}
